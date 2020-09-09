@@ -1,0 +1,81 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card ">
+        <div class="card-header row">
+          <h4 class="card-title col-4">Lists</h4>
+          <div class="main col-8">
+  
+            <!-- Actual search box -->
+            <div class="form-group has-search">
+              <span class="fa fa-search form-control-feedback"></span>
+              <input type="text" name="search" [(ngModel)]="searchText" autocomplete="off"class="form-control" placeholder="Search">
+            </div>
+            
+            <!-- Another variation with a button -->
+            
+            
+           
+            
+          </div>
+        </div>
+       
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class=" text-primary">
+                <th>
+                  Message
+                </th>
+                <th>
+                  Assignee
+                </th>
+                <th>
+                  Priority
+                </th>
+                <th >
+                  Due Date
+                </th>
+                <th >
+                  Edit
+                </th>
+                <th >
+                  Delete
+                </th>
+              </thead>
+              <tbody>
+                <tr *ngFor="let x of data | filter:searchText">
+                  <td>
+                    {{x.message}}
+                  </td>
+                  <td>
+                   {{x.assigned_name}}
+                  </td>
+                  <td>
+                    {{x.priority}}
+                  </td>
+                  <td>
+                {{x.due_date}}
+                  </td>
+                  <td>
+                 <img src="../assets/img/images.png" (click)="editTask(x)" width="20px;" />
+                  </td>
+                  <td >
+                    <img src="../assets/img/delete.png" (click)="deleteList(x)" width="20px;" />
+                  </td>
+                </tr>
+         
+              
+       
+            
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
