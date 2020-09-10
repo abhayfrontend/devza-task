@@ -19,24 +19,24 @@ data:any;
 
 
   getUsers():Observable<any>{
-    const url ='http://devza.com/tests/tasks/listusers';
+    const url ='https://devza.com/tests/tasks/listusers';
     return this.http.get(url);
   }
   getList():Observable<any>{
-    const url='http://devza.com/tests/tasks/list';
+    const url='https://devza.com/tests/tasks/list';
     return this.http.get(url);
   }
 
   updateTask(obj):Observable<any>{
-    const url='http://devza.com/tests/tasks/update';
+    const url='https://devza.com/tests/tasks/update';
     return this.http.post(url,obj)
   }
   createTask(obj):Observable<any>{
-    const url='http://devza.com/tests/tasks/create';
+    const url='https://devza.com/tests/tasks/create';
     return this.http.post(url,obj);
   }
   deleteTask(obj):Observable<any>{
-    const url='http://devza.com/tests/tasks/delete';
+    const url='https://devza.com/tests/tasks/delete';
     return this.http.post(url,obj)
   }
 }
